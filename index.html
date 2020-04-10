@@ -154,18 +154,18 @@ better flow, this comment will be removed.
 <a>Decentralized identifiers</a> (DIDs) are a new type of identifier that
 enables verifiable, decentralized digital identity. A <a>DID</a> identifies
 any subject (e.g., a person, organization, thing, data model, abstract entity, etc.)
-that the controller of the <a>DID</a> decides that it 
-identifies. These new identifiers are designed to enable the controller 
-of a <a>DID</a> to prove control over it and to be implemented independently 
-of any centralized registry, identity provider, or certificate authority. 
-<a>DID</a>s are URLs that associate a <a>DID subject</a> with a 
-<a>DID document</a> allowing trustable interactions associated with that subject. 
-Each <a>DID document</a> can express cryptographic material, verification methods, 
-or <a>service endpoints</a>, which provide a set of mechanisms enabling a 
-<a>DID controller</a> to prove control of the <a>DID</a>. <a>Service 
-endpoints</a> enable trusted interactions associated with the <a>DID 
-subject</a>. A <a>DID document</a> might contain semantics about the subject 
-that it identifies. A <a>DID document</a> might contain the <a>DID subject</a> 
+that the controller of the <a>DID</a> decides that it
+identifies. These new identifiers are designed to enable the controller
+of a <a>DID</a> to prove control over it and to be implemented independently
+of any centralized registry, identity provider, or certificate authority.
+<a>DID</a>s are URLs that associate a <a>DID subject</a> with a
+<a>DID document</a> allowing trustable interactions associated with that subject.
+Each <a>DID document</a> can express cryptographic material, verification methods,
+or <a>service endpoints</a>, which provide a set of mechanisms enabling a
+<a>DID controller</a> to prove control of the <a>DID</a>. <a>Service
+endpoints</a> enable trusted interactions associated with the <a>DID
+subject</a>. A <a>DID document</a> might contain semantics about the subject
+that it identifies. A <a>DID document</a> might contain the <a>DID subject</a>
 itself (e.g. a data model).
     </p>
     <p>
@@ -808,8 +808,8 @@ usually contains cryptographic material enabling authentication of the
         </p>
 
         <p class="note">
-To avoid these issues, developers should refer to the Decentralized Characteristics 
-Rubric [[?DID-RUBRIC]] to decide which <a>DID method</a> best addresses the needs of 
+To avoid these issues, developers should refer to the Decentralized Characteristics
+Rubric [[?DID-RUBRIC]] to decide which <a>DID method</a> best addresses the needs of
 the use case.
         </p>
 
@@ -1094,11 +1094,6 @@ the use case.
   includes a <a>DID fragment</a>. Tree-based processing can be used instead.
         </p>
 
-        <p>
-  Implementations SHOULD NOT prevent the use of <a>JSON Pointer</a>
-  ([[!RFC6901]]).
-        </p>
-
         <pre class="example nohighlight">
   did:example:123456#public-key-1
         </pre>
@@ -1352,10 +1347,10 @@ the <a>DID document</a>; see Section <a href="#authorization-and-delegation"></a
       </p>
 
       <p>
-The value of the <code>id</code> property MAY be structured as a <a href="https://en.wikipedia.org/wiki/Compound_key">compound key</a>. 
+The value of the <code>id</code> property MAY be structured as a <a href="https://en.wikipedia.org/wiki/Compound_key">compound key</a>.
 This is especially useful for integrating with existing key management systems and key formats such as <a href="https://tools.ietf.org/html/rfc7517">JWK</a>.
-It is RECOMMENDED that <a href="https://tools.ietf.org/html/rfc7517">JWK</a> <code>kid</code> values are set to the <a href="https://tools.ietf.org/html/rfc7638">public key fingerprint</a>. 
-It is RECOMMENDED that verification methods that use JWKs to represent their 
+It is RECOMMENDED that <a href="https://tools.ietf.org/html/rfc7517">JWK</a> <code>kid</code> values are set to the <a href="https://tools.ietf.org/html/rfc7638">public key fingerprint</a>.
+It is RECOMMENDED that verification methods that use JWKs to represent their
 public keys utilize the value of <code>kid</code> as their fragment identifier.
 See the first key in <a href="#example-12-various-public-keys">EXAMPLE 12</a> for an example of a public key with a compound key identifier.
       </p>
@@ -2416,13 +2411,13 @@ Update
 The <a>DID method</a> specification MUST specify how a client can update a
 <a>DID document</a> on the <a>DID registry</a>, including all cryptographic
 operations necessary to establish proof of control, <em>or</em> state that
-updates are not possible. 
+updates are not possible.
         </p>
 
         <p>
-An update to a <a>DID</a> is any change, after creation, in the data used to produce a <a>DID document</a>. 
-<a>DID Method</a> implementers are responsible for defining what constitutes an update, 
-and what properties of the <a>DID document</a> are supported by a given <a>DID method</a>. 
+An update to a <a>DID</a> is any change, after creation, in the data used to produce a <a>DID document</a>.
+<a>DID Method</a> implementers are responsible for defining what constitutes an update,
+and what properties of the <a>DID document</a> are supported by a given <a>DID method</a>.
 For example, an update operation which replaces key material without changing it could be a valid update that does not result in changes to the <a>DID document</a>.
         </p>
       </section>
@@ -2915,8 +2910,8 @@ others are of partial data, where the larger context is assumed.
 Encrypted Data in DID Documents
       </h2>
       <p>
-DID documents are typically publicly available. Encryption algorithms have been 
-known to fail due to advances in cryptography and computing power. 
+DID documents are typically publicly available. Encryption algorithms have been
+known to fail due to advances in cryptography and computing power.
 Implementers are advised to assume that any
 encrypted data placed in a <a>DID document</a> might eventually be made available in clear
 text to the same audience to which the encrypted data is available.
